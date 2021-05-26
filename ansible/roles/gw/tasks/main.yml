@@ -1,0 +1,9 @@
+---
+# tasks file for gw
+- name: 'Конфигурация inetRouter'
+  script: inetRouter.sh
+  tags: inetRouter
+
+- name: 'Конфигурация центрального роутера centralRouter config networks'
+  script: centralRouter.sh
+  tags: centralRouter

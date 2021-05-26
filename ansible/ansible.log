@@ -1,0 +1,743 @@
+2021-05-25 09:52:51,436 p=3051022 u=andrey n=ansible | - Role routers was created successfully
+2021-05-25 09:55:20,375 p=3052205 u=andrey n=ansible | - Role gw was created successfully
+2021-05-26 08:08:07,503 p=3552737 u=andrey n=ansible | - Role gw_iptables was created successfully
+2021-05-26 08:17:26,302 p=3557139 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--@servers:
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 08:24:59,536 p=3560499 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--@servers:
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 08:29:06,522 p=3562232 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--@servers:
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:20:00,290 p=3720284 u=andrey n=ansible | - Role servers was created successfully
+2021-05-26 15:35:22,416 p=3726471 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@servers:
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+2021-05-26 15:36:20,716 p=3726803 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+2021-05-26 15:36:51,986 p=3727007 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+2021-05-26 15:37:49,391 p=3727487 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+2021-05-26 15:37:54,336 p=3727517 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:38:18,168 p=3727669 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+2021-05-26 15:38:37,989 p=3727785 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:39:37,633 p=3728137 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:41:01,566 p=3728737 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{office2_gw = 192.168.3.18}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{office2_gw = 192.168.3.18}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{office2_gw = 192.168.3.18}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:42:56,952 p=3729520 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{office2_gw = 192.168.3.18}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{office2_gw = 192.168.3.18}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{office2_gw = 192.168.3.18}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 15:46:17,580 p=3730775 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-26 16:02:34,867 p=3737129 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}

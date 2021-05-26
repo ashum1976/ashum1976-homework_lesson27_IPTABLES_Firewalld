@@ -1,0 +1,3 @@
+---
+inetRouter_vars:
+      - { conn_name: 'eth1', ifname: 'eth1', ip4: '192.168.255.1/28' }

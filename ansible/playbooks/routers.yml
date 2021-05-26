@@ -1,0 +1,27 @@
+---
+
+- name:  'Установка параметров сетевых интерфейсов'
+  hosts:
+    - routers
+  become: True
+  gather_facts: True
+  roles:
+    - gw
+    - servers
+
+
+- name: 'Упаравление и настройка iptables на хост'
+  hosts:
+      inetrRouter2
+  become: True
+  gather_facts: True
+  roles:
+    - gw_iptables
+
+- name:  'Установка параметров сетевых интерфейсов'
+  hosts:
+    - servers
+  become: True
+  gather_facts: True
+  roles:
+    - servers
