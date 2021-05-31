@@ -1,4 +1,4 @@
-# -*- mode: ruby -*- 
+# -*- mode: ruby -*-
 # vim: set ft=ruby :
 # -*- mode: ruby -*-
 # vim: set ft=ruby :
@@ -8,29 +8,37 @@ MACHINES = {
         :box_name => "centos/7",
         #:public => {:ip => '10.10.10.1', :adapter => 1},
         :net => [
-                   {ip: '192.168.255.1', adapter: 2, netmask: "255.255.255.248", virtualbox__intnet: "router-net"},
+                   {ip: '192.168.255.2', adapter: 2, netmask: "255.255.255.248", virtualbox__intnet: "router-net"},
                 ]
               },
-  :inetRouter2 => {
+
+:centralRouter => {
         :box_name => "centos/7",
-        #:public => {:ip => '10.10.10.1', :adapter => 1},
         :net => [
                    {ip: '192.168.255.3', adapter: 2, netmask: "255.255.255.248", virtualbox__intnet: "router-net"},
-                ]
-              },
-  :centralRouter => {
-        :box_name => "centos/7",
-        :net => [
-                   {ip: '192.168.255.2', adapter: 2, netmask: "255.255.255.248", virtualbox__intnet: "router-net"},
                    {ip: '192.168.0.1', adapter: 3, netmask: "255.255.255.240", virtualbox__intnet: "dir-net"},
                  ]
               },
 
-  :centralServer => {
+:centralServer => {
         :box_name => "centos/7",
         :net => [
                    {ip: '192.168.0.2', adapter: 2, netmask: "255.255.255.240", virtualbox__intnet: "dir-net"},
                 ]
+              },
+
+:inetRouter2 => {
+        :box_name => "centos/7",
+        #:public => {:ip => '10.10.10.1', :adapter => 1},
+        :net => [
+                    {ip: '192.168.255.4', adapter: 2, netmask: "255.255.255.248", virtualbox__intnet: "router-net"},
+                    {ip: '192.168.255.10', adapter: 3, netmask: "255.255.255.248", virtualbox__extnet: "ext_net"},
+                ],
+        # :forwarded_port =>
+        #         [
+        #             {guest: "80", host: "80"},
+        #
+        #         ],
               },
 
 
@@ -38,17 +46,25 @@ MACHINES = {
 
 Vagrant.configure("2") do |config|
 
+  config.vm.provider "virtualbox" do |v|
+  v.customize ["modifyvm", :id, "--audio", "none", ]
+  v.memory = 256
+  v.cpus = 1
+    end
   MACHINES.each do |boxname, boxconfig|
     config.vm.synced_folder "./", "/vagrant", type: "rsync", rsync__auto: true, rsync__exclude: ['./hddvm, README.md']
-    config.vm.define boxname do |box|
 
+    config.vm.define boxname do |box|
         box.vm.box = boxconfig[:box_name]
         box.vm.host_name = boxname.to_s
-
         boxconfig[:net].each do |ipconf|
           box.vm.network "private_network", ipconf
         end
-
+        if boxconfig.key?(:forwarded_port)
+          boxconfig[:forwarded_port].each do |port|
+          box.vm.network "forwarded_port", port
+          end
+        end
         box.vm.provision "shell", inline: <<-SHELL
           mkdir -p ~root/.ssh
           cp ~vagrant/.ssh/auth* ~root/.ssh
@@ -59,7 +75,7 @@ Vagrant.configure("2") do |config|
 
         box.vm.provision :ansible_local do |ansible|
        #Установка  коллекции community.general, для использования community.general.nmcli (nmcli) управление сетевыми устройствами.
-          ansible.galaxy_command = 'ansible-galaxy collection install community.general'
+          # ansible.galaxy_command = 'ansible-galaxy collection install community.general'
           ansible.verbose = "vv"
           ansible.install = "true"
           #ansible.limit = "all"

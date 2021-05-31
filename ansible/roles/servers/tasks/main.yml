@@ -1,8 +1,8 @@
 ---
-# tasks file for servers 
+# tasks file for servers
 - name: 'Проверка доступности '
   ping:
 
-- name: 'Конфигурация centralServer'
-  script: centralServer.sh
-  tags: centralServer
+# - name: 'Конфигурация centralServer'
+#   script: centralServer.sh
+#   tags: centralServer

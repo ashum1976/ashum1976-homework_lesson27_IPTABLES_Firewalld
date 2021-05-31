@@ -37,7 +37,7 @@ routers:
       #ansible_host: 192.168.255.1/29
       # ansible_port: 22
       # ansible_private_key_file: '.vagrant/machines/inetRouter/virtualbox/private_key'
-#     centralRouter:
+    centralRouter:
 #     #   #ansible_host: 192.168.255.2/29
 #     #   ansible_port: 22
 #     #   ansible_private_key_file: '.vagrant/machines/centralRouter/virtualbox/private_key'

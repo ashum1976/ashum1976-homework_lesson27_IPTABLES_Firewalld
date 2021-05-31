@@ -1,3 +1,4 @@
+## network interfaces
 route_eth1: /etc/sysconfig/network-scripts/route-eth1
 route_eth2: /etc/sysconfig/network-scripts/route-eth2
 route_eth3: /etc/sysconfig/network-scripts/route-eth3
@@ -9,3 +10,18 @@ ifcfg_eth1: /etc/sysconfig/network-scripts/ifcfg-eth1
 ifcfg_eth2: /etc/sysconfig/network-scripts/ifcfg-eth2
 ifcfg_eth3: /etc/sysconfig/network-scripts/ifcfg-eth3
 ifcfg_eth4: /etc/sysconfig/network-scripts/ifcfg-eth4
+### Список yum пакетов для удаления
+yum_remove:
+      # - iptables
+      - firewalld
+
+### Список yum пакетов для установки
+yum_install_all:
+      - mc
+      - iptables-services
+      - kbd
+      - epel-release
+      - tcpdump
+#пакет iptables, упарвляемый systemd, ставится на inetRouter2
+yum_install_inetrouter2:
+      - iptables-services

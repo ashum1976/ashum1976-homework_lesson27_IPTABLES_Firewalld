@@ -1,2 +1,12 @@
 ---
 # handlers file for gw
+- name: restart iptables
+  systemd:
+    name: iptables
+    state: restarted
+  
+
+- name: restart nginx
+  systemd:
+    name: nginx
+    state: restarted

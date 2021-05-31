@@ -1,0 +1,13 @@
+
+
+Делаем натирование на интерфейсе приватной сети eth1 (192.168.255.4)
+iptables -t nat -A POSTROUTING --source 192.168.255.0/29 -o eth1 -j MASQUERADE - на интерфейсе eth1(192.168.255.4 находится в приватной сети)
+Доступ к серверу nginx, запущенному на centralServer (ip = 192.168.0.2) через nat (-j MASQUERADE) на VM inetRouter2 (eth2 (192.168.255.10) - внешний интерфейс виден с хостовой машины ) и (-j DNAT --to-destination 192.168.0.2:8080)
+
+
+
+или доступ к серверу nginx, на VM centralServer,  обеспечить с помощью соответствующих роутов и правила для перенаправления протов -j DNAT (-A PREROUTING -m tcp -p tcp --dport 80 -j DNAT --to-destination 192.168.0.2:8080): 
+
+sudo ip r a 192.168.0.0/28 via 192.168.255.10 - роут на хостовой машине, внутрь сетки 192.168.0.0/28 (centralServer) - ?
+sudo ip r a 192.168.255.0/29 via 192.168.255.10 - роут на хостовой машине, внутрь сетки 192.168.255.0/29 (centralRoter, inetRouter) - ?
+sudo ip r a 192.168.255.8/29 via 192.168.255.4 - route на (centralRoter) 192.168.255.3/29

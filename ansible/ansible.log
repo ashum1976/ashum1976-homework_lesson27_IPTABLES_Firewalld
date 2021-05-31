@@ -741,3 +741,369 @@
   |--{ansible_host = 127.0.0.1}
   |--{ansible_ssh_pass = vagrant}
   |--{ansible_user = vagrant}
+2021-05-27 00:53:20,666 p=36332 u=andrey n=ansible | ERROR! We were unable to read either as JSON nor YAML, these are the errors we got from each:
+JSON: Expecting value: line 1 column 1 (char 0)
+
+Syntax Error while loading YAML.
+  did not find expected key
+
+The error appears to be in '/installs/Study/OTUS/lesson_27_IPTABLES_Firewalld/homework_lesson27_IPTABLES_Firewalld/ansible/inventory/group_vars/net/net_vars.yml': line 14, column 1, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+### yum пакеты для удаления
+- yum_remove:
+^ here
+
+2021-05-27 00:54:15,863 p=36434 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables']}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables']}
+  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |--{ext_gw = 192.168.255.1}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables']}
+  |  |--{centralServer_ip = 192.168.0.2}
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--{yum_install = ['mc']}
+  |--{yum_remove = ['iptables']}
+2021-05-27 00:54:53,748 p=36533 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables', 'tree']}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables', 'tree']}
+  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |--{ext_gw = 192.168.255.1}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install = ['mc']}
+  |  |  |--{yum_remove = ['iptables', 'tree']}
+  |  |--{centralServer_ip = 192.168.0.2}
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--{yum_install = ['mc']}
+  |--{yum_remove = ['iptables', 'tree']}
+2021-05-29 00:00:02,121 p=24429 u=andrey n=ansible | @all:
+  |--@net:
+  |  |--@routers:
+  |  |  |--inetRouter
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |  |--{nginx_listen_port = 8080}
+  |  |  |  |--{nginx_user = nginx}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |  |--{yum_remove = ['firewalld']}
+  |  |  |--inetRouter2
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |  |--{nginx_listen_port = 8080}
+  |  |  |  |--{nginx_user = nginx}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |  |--{yum_remove = ['firewalld']}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |--@servers:
+  |  |  |--centralServer
+  |  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |  |--{ansible_user = vagrant}
+  |  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |  |--{nginx_listen_port = 8080}
+  |  |  |  |--{nginx_user = nginx}
+  |  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |  |--{yum_remove = ['firewalld']}
+  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |--{nginx_listen_port = 8080}
+  |  |--{nginx_user = nginx}
+  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |--{yum_remove = ['firewalld']}
+  |--@ungrouped:
+  |--{ansible_host = 127.0.0.1}
+  |--{ansible_ssh_pass = vagrant}
+  |--{ansible_user = vagrant}
+2021-05-29 02:12:41,243 p=74951 u=andrey n=ansible | ERROR! Pattern must be valid group name when using --graph
+2021-05-29 02:13:01,836 p=74979 u=andrey n=ansible | @net:
+  |--@routers:
+  |  |--centralRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{nginx_listen_port = 8080}
+  |  |  |--{nginx_user = nginx}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |--{yum_remove = ['firewalld']}
+  |  |--inetRouter
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.1/28'}]}
+  |  |  |--{nginx_listen_port = 8080}
+  |  |  |--{nginx_user = nginx}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |--{yum_remove = ['firewalld']}
+  |  |--inetRouter2
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |  |--{ext_gw = 192.168.255.1}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{inetRouter2_vars = [{'conn_name': 'eth1', 'ifname': 'eth1', 'ip4': '192.168.255.3/28'}]}
+  |  |  |--{nginx_listen_port = 8080}
+  |  |  |--{nginx_user = nginx}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |--{yum_remove = ['firewalld']}
+  |  |--{centralRouter_gw_centralServer = 192.168.0.1}
+  |  |--{ext_gw = 192.168.255.1}
+  |--@servers:
+  |  |--centralServer
+  |  |  |--{ansible_host = 127.0.0.1}
+  |  |  |--{ansible_ssh_pass = vagrant}
+  |  |  |--{ansible_user = vagrant}
+  |  |  |--{centralServer_ip = 192.168.0.2}
+  |  |  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |  |  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |  |  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |  |  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |  |  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |  |  |--{nginx_listen_port = 8080}
+  |  |  |--{nginx_user = nginx}
+  |  |  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |  |  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |  |  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |  |  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |  |  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |  |  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |  |  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |  |  |--{yum_remove = ['firewalld']}
+  |  |--{centralServer_ip = 192.168.0.2}
+  |--{ifcfg_eth0 = /etc/sysconfig/network-scripts/ifcfg-eth0}
+  |--{ifcfg_eth1 = /etc/sysconfig/network-scripts/ifcfg-eth1}
+  |--{ifcfg_eth2 = /etc/sysconfig/network-scripts/ifcfg-eth2}
+  |--{ifcfg_eth3 = /etc/sysconfig/network-scripts/ifcfg-eth3}
+  |--{ifcfg_eth4 = /etc/sysconfig/network-scripts/ifcfg-eth4}
+  |--{nginx_listen_port = 8080}
+  |--{nginx_user = nginx}
+  |--{route_eth1 = /etc/sysconfig/network-scripts/route-eth1}
+  |--{route_eth2 = /etc/sysconfig/network-scripts/route-eth2}
+  |--{route_eth3 = /etc/sysconfig/network-scripts/route-eth3}
+  |--{route_eth4 = /etc/sysconfig/network-scripts/route-eth4}
+  |--{route_eth5 = /etc/sysconfig/network-scripts/route-eth5}
+  |--{route_eth6 = /etc/sysconfig/network-scripts/route-eth6}
+  |--{yum_install_all = ['mc', 'iptables', 'kbd', 'epel-release']}
+  |--{yum_remove = ['firewalld']}

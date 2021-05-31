@@ -1,9 +1,130 @@
 ---
 # tasks file for gw
+
+#Настройка сетевых соединений
+
 - name: 'Конфигурация inetRouter'
   script: inetRouter.sh
   tags: inetRouter
 
+- name: 'Конфигурация inetRouter2'
+  script: inetRouter2.sh
+  tags: inetRouter2
+
 - name: 'Конфигурация центрального роутера centralRouter config networks'
   script: centralRouter.sh
   tags: centralRouter
+
+- name: 'Конфигурация centralServer'
+  script: centralServer.sh
+  tags: centralServer
+
+# Работа с пакетами, установка, удаление, обновление
+## Обновить все пакеты
+# - name: "Upgrade all packages"
+#   yum:
+#     name: '*'
+#     state: latest
+#   tags:
+#     - inetRouter
+#     - inetRouter2
+#     - centralRouter
+#     - centralServer
+## Удалить пакеты, список в переменной "{{yum_remove}}"
+- name: "Удалить пакеты "
+  yum:
+    name: "{{ yum_remove }}"
+    state: absent
+  tags:
+    - inetRouter
+    - inetRouter2
+    - centralRouter
+    - centralServer
+## Установить пакеты, список в переменной "{{ yum_install_all }}"
+- name: "Установить пакеты "
+  yum:
+    name: "{{ yum_install_all }}"
+    state: present
+    disable_gpg_check:  yes
+  tags:
+    - inetRouter
+    - inetRouter2
+    - centralRouter
+    - centralServer
+
+- name: "Установить nginx "
+  yum:
+    name:
+      - nginx
+    state: present
+    disable_gpg_check:  yes
+  tags:
+    - centralServer
+    - nginx-package
+## Включить в автозагрузку и запустить nginx on centralServer
+- name: Enable and started nginx_port
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
+  tags:
+    - centralServer
+##Скопировать файл "iptables" для настройки iptables на inetRouter2
+
+- name: Copy file iptables to inetRouter2
+  copy:
+    dest: /etc/sysconfig/iptables
+    src:  inetRouter2_iptables
+    owner:  root
+    mode: 0600
+  tags:
+    - inetRouter2
+
+## Включить в автозагрузку и запустить iptables
+- name: Enable and started iptables on inetRouter2
+  systemd:
+    name: iptables
+    state: started
+    enabled: yes
+  tags:
+    - inetRouter2
+  notify:
+    - restart iptables
+
+#Работа с конфигурациями файлов, шаблоны.
+##На основе шаблона создаём конфигфайл для nginx-a. Шаблон лежит в папке templates, запускаемой роли (в данном случае - gw)
+- name: Nginx conf files
+  template:
+    src: nginx.conf.j2
+    dest: /etc/nginx/nginx.conf
+    mode: 0600
+  tags:
+    - centralServer
+  notify:
+    - restart nginx
+
+
+- name:  Удаление index.html nginx dirs
+  file:
+    dest: /usr/share/nginx/html/index.html
+    state: absent
+  tags:
+    - centralServer
+##Создание простого файла с содержимым (простая строка "Доступ к nginx через DNAT \n", символ новой строки "\n" обязателен)
+- name: index.html
+  copy:
+    content: "Доступ к nginx через DNAT, server - centralServer \n"
+    dest: /usr/share/nginx/html/index.html
+    owner:  root
+    group:  root
+    mode: 0644
+  tags:
+    - centralServer
+
+
+
+
+
+# - name:
+#   file:
+#     touch:

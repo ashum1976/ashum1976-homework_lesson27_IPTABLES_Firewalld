@@ -2,7 +2,7 @@
 
 - name:  'Установка параметров сетевых интерфейсов'
   hosts:
-    - routers
+    - net
   become: True
   gather_facts: True
   roles:
@@ -10,18 +10,18 @@
     - servers
 
 
-- name: 'Упаравление и настройка iptables на хост'
+- name: 'Управление и настройка iptables на хосте'
   hosts:
-      inetrRouter2
+      inetRouter2
   become: True
   gather_facts: True
   roles:
     - gw_iptables
 
-- name:  'Установка параметров сетевых интерфейсов'
-  hosts:
-    - servers
-  become: True
-  gather_facts: True
-  roles:
-    - servers
+# - name:  'Установка параметров сетевых интерфейсов'
+#   hosts:
+#     - servers
+#   become: True
+#   gather_facts: False
+#   roles:
+#     - servers
