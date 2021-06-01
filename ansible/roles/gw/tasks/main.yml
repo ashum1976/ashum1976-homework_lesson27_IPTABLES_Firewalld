@@ -69,27 +69,9 @@
     enabled: yes
   tags:
     - centralServer
-##Скопировать файл "iptables" для настройки iptables на inetRouter2
 
-- name: Copy file iptables to inetRouter2
-  copy:
-    dest: /etc/sysconfig/iptables
-    src:  inetRouter2_iptables
-    owner:  root
-    mode: 0600
-  tags:
-    - inetRouter2
 
-## Включить в автозагрузку и запустить iptables
-- name: Enable and started iptables on inetRouter2
-  systemd:
-    name: iptables
-    state: started
-    enabled: yes
-  tags:
-    - inetRouter2
-  notify:
-    - restart iptables
+
 
 #Работа с конфигурациями файлов, шаблоны.
 ##На основе шаблона создаём конфигфайл для nginx-a. Шаблон лежит в папке templates, запускаемой роли (в данном случае - gw)

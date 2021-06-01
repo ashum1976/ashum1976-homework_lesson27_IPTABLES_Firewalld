@@ -1,2 +1,50 @@
 ---
 # tasks file for gw_iptables
+#Запуск задач, для установки и настройки iptables, реализация порт knock (копирование скрипта для запуска )
+#
+##Скопировать файл "iptables" для настройки iptables на inetRouter2
+- name: Copy file iptables to inetRouter2
+  copy:
+    dest: /etc/sysconfig/iptables
+    src:  inetRouter2_iptables
+    owner:  root
+    mode: 0600
+  tags:
+    - inetRouter2
+  notify:
+     - restart iptables
+
+##Скопировать файл "iptables" для настройки iptables на centralRoter
+
+- name: Copy file iptables to centralRoter
+  copy:
+    dest: /etc/sysconfig/iptables
+    src:  inetRouter_iptables
+    owner:  root
+    mode: 0600
+  tags:
+    - inetRouter
+  notify:
+     - restart iptables
+
+## Включить в автозагрузку и запустить iptables
+- name: Enable and started iptables on inetRouter2
+  systemd:
+    name: iptables
+    state: started
+    enabled: yes
+  tags:
+    - inetRouter2
+    - inetRouter
+  # notify:
+  #   - restart iptables
+
+- name: index.html
+  copy:
+    src:  knock_ssh.sh
+    dest: /root
+    owner:  root
+    group:  root
+    mode: 0700
+  tags:
+    - centralRouter

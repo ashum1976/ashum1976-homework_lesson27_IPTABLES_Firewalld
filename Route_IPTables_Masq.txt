@@ -6,7 +6,7 @@ iptables -t nat -A POSTROUTING --source 192.168.255.0/29 -o eth1 -j MASQUERADE -
 
 
 
-или доступ к серверу nginx, на VM centralServer,  обеспечить с помощью соответствующих роутов и правила для перенаправления протов -j DNAT (-A PREROUTING -m tcp -p tcp --dport 80 -j DNAT --to-destination 192.168.0.2:8080): 
+или доступ к серверу nginx, на VM centralServer,  обеспечить с помощью соответствующих роутов и правила для перенаправления протов -j DNAT (-A PREROUTING -m tcp -p tcp --dport 80 -j DNAT --to-destination 192.168.0.2:8080):
 
 sudo ip r a 192.168.0.0/28 via 192.168.255.10 - роут на хостовой машине, внутрь сетки 192.168.0.0/28 (centralServer) - ?
 sudo ip r a 192.168.255.0/29 via 192.168.255.10 - роут на хостовой машине, внутрь сетки 192.168.255.0/29 (centralRoter, inetRouter) - ?

@@ -7,12 +7,13 @@
   gather_facts: True
   roles:
     - gw
-    - servers
 
 
-- name: 'Управление и настройка iptables на хосте'
+
+- name: 'Управление и настройка iptables на хостах'
   hosts:
-      inetRouter2
+      inetRouter
+      centralRouter
   become: True
   gather_facts: True
   roles:
