@@ -59,7 +59,9 @@
 
       ./knock_ssh.sh 192.168.255.2 8088 7077 9099
 
-и с виртуальной машины centralRoter пробуем зайти ssh -o StrictHostKeyChecking=no vagrant@192.168.255.2
+и с виртуальной машины centralRoter пробуем зайти ещё раз:
+
+      ssh -o StrictHostKeyChecking=no vagrant@192.168.255.2
 
 
 
