@@ -40,7 +40,8 @@
     - inetRouter2
     - centralRouter
     - centralServer
-## Установить пакеты, список в переменной "{{ yum_install_all }}"
+# Установить пакеты, список в переменной "{{ yum_install_all }}"
+##Общие пакеты для всех серверов
 - name: "Установить пакеты "
   yum:
     name: "{{ yum_install_all }}"
@@ -51,6 +52,14 @@
     - inetRouter2
     - centralRouter
     - centralServer
+##Установить пакеты, спецефические для конкретных серверов
+- name: "Установить пакеты "
+  yum:
+    name: "{{ yum_install_centralRouter }}"
+    state: present
+    disable_gpg_check:  yes
+  tags:
+    - centralRouter
 
 - name: "Установить nginx "
   yum:
@@ -69,8 +78,6 @@
     enabled: yes
   tags:
     - centralServer
-
-
 
 
 #Работа с конфигурациями файлов, шаблоны.

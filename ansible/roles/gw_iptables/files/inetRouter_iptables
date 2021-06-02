@@ -9,10 +9,11 @@
 :SSH-INPUTTWO - [0:0]
 
 -A INPUT -i lo -j ACCEPT
+-A INPUT  -m conntrack --ctstate NEW -m tcp -p tcp --source 10.0.2.2 --dport 22 -j ACCEPT
 -A INPUT -j TRAFFIC
 -A TRAFFIC -p icmp --icmp-type any -j ACCEPT
 -A TRAFFIC -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
--A TRAFFIC -m conntrack --ctstate NEW -m tcp -p tcp --source 192.168.255.3 --dport 22 -m recent --rcheck --seconds 30 --name SSH2 -j ACCEPT
+-A TRAFFIC -m conntrack --ctstate NEW -m tcp -p tcp --dport 22 -m recent --rcheck --seconds 30 --name SSH2 -j ACCEPT
 -A TRAFFIC -m conntrack --ctstate NEW -m tcp -p tcp -m recent --name SSH2 --remove -j DROP
 -A TRAFFIC -m conntrack --ctstate NEW -m tcp -p tcp --dport 9099 -m recent --rcheck --name SSH1 -j SSH-INPUTTWO
 -A TRAFFIC -m conntrack --ctstate NEW -m tcp -p tcp -m recent --name SSH1 --remove -j DROP

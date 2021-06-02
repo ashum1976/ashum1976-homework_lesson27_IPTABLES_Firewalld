@@ -60,6 +60,11 @@ Vagrant.configure("2") do |config|
         boxconfig[:net].each do |ipconf|
           box.vm.network "private_network", ipconf
         end
+        # box.vm.provider "virtualbox" do |v|
+        # v.customize ["modifyvm", :id, "--audio", "none", ]
+        # v.memory = 512
+        # v.cpus = 1
+        #   end
         if boxconfig.key?(:forwarded_port)
           boxconfig[:forwarded_port].each do |port|
           box.vm.network "forwarded_port", port

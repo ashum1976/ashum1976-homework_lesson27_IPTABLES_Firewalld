@@ -23,5 +23,8 @@ yum_install_all:
       - epel-release
       - tcpdump
 #пакет iptables, упарвляемый systemd, ставится на inetRouter2
-yum_install_inetrouter2:
+yum_install_inetRouter2:
       - iptables-services
+
+yum_install_centralRouter:
+      - nmap
