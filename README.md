@@ -324,7 +324,7 @@ _REDIRECT и локальный клиент:_
 
      iptables -t nat -A OUTPUT -p tcp -s 127.0.0.1 --dport 5555 -j REDIRECT --to-ports 22
 
-
+___
 
 - **--tcp-flags:**
 
