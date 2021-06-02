@@ -43,7 +43,7 @@
 
        разрешающий прхождение пакетов из приватной сети 192.168.255.8/29
 
-[Правила Iptables на inetRouter2](./ansible/roles/gw/files/inetRouter2_iptables)
+[Правила Iptables на inetRouter2](./ansible/roles/gw_iptables/files/inetRouter2_iptables)
 
 
 **Реализация порт knocking**
@@ -59,7 +59,7 @@
 
       ./knock_ssh.sh 192.168.255.2 8088 7077 9099
 
-и с виртуальной машины centralRoter пробуем зайти ssh -o StrictHostKeyChecking=no vagrant@192.168.255.2 
+и с виртуальной машины centralRoter пробуем зайти ssh -o StrictHostKeyChecking=no vagrant@192.168.255.2
 
 
 
