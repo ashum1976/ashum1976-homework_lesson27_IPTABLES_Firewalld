@@ -76,8 +76,12 @@
 [Структура прохождения пакета по netfilter](Images/IPTables_process_flow.png)
 
 
-
 ![Альтернативное видение структуры работы IPTABLES](Images/Netfilter-tables.jpg "Альтернативное видение структуры работы IPTABLES")
+
+
+[Прохождение пакета по netfilter2](https://interface31.ru/tech_it/2020/02/osnovy-iptables-dlya-nachinayushhih-chast-1.html)
+
+![Структура прохождения пакета по таблицам](Images/IPTables_process_flow2.png)
 
 
 [Интересная статья о защите от DDoS](https://javapipe.com/blog/iptables-ddos-protection/)
